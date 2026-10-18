@@ -1,0 +1,572 @@
+/* =========================================================
+   1. GLOBAL PALETTE & RESET (DEATH OF ME RED AESTHETIC)
+   ========================================================= */
+:root {
+    --album-red: #E60012;      /* สีแดงสดแสบตาตามภาพต้นฉบับ */
+    --album-red-dark: #C4000F;
+    --pure-black: #000000;
+    --pure-white: #ffffff;
+    --paper-tint: #FFF2F2;
+    --font-heading: 'Bebas Neue', sans-serif;
+    --font-text: 'Montserrat', 'Prompt', sans-serif;
+    --font-body-alt: 'Merriweather', 'Prompt', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--album-red);
+    color: var(--pure-black);
+    font-family: var(--font-text);
+    text-align: center;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   2. TOP CONTAINER (EDITORIAL COLLAGE COVER)
+   ========================================================= */
+.top-container {
+    background-color: var(--album-red);
+    padding: 30px 20px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.top-meta {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.explosion-tag {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    color: var(--pure-black);
+    font-weight: 900;
+}
+
+/* Collage Area */
+.cover-collage {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto 40px auto;
+    min-height: 620px;
+}
+
+/* Photo Card Component with Black Border */
+.photo-card {
+    background-color: var(--pure-white);
+    border: 3px solid var(--pure-black);
+    position: absolute;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.4);
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ตำแหน่งภาพตามแบบในภาพปก */
+.photo-top-left {
+    width: 190px;
+    height: 230px;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.photo-cluster-right .photo-mid-1 {
+    width: 220px;
+    height: 250px;
+    top: 30px;
+    right: 90px;
+    z-index: 1;
+}
+
+.photo-cluster-right .photo-mid-2 {
+    width: 170px;
+    height: 200px;
+    top: 140px;
+    right: 20px;
+    z-index: 3;
+}
+
+.photo-cluster-lower-left .photo-lower-profile {
+    width: 180px;
+    height: 200px;
+    bottom: 30px;
+    left: 80px;
+    z-index: 2;
+}
+
+.photo-cluster-bottom .photo-bot-main {
+    width: 240px;
+    height: 280px;
+    bottom: 40px;
+    right: 110px;
+    z-index: 2;
+}
+
+.photo-cluster-bottom .photo-bot-small {
+    width: 120px;
+    height: 145px;
+    bottom: 10px;
+    right: 40px;
+    z-index: 3;
+}
+
+/* เลขกำกับรูปภาพสีดำ (1), (2), (3)... */
+.photo-num {
+    position: absolute;
+    font-family: var(--font-text);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--pure-black);
+}
+
+.num-bottom-left { bottom: -24px; left: 0; }
+.num-mid-right   { top: 10px; right: -25px; }
+.num-face-right  { top: 10px; right: -25px; }
+.num-bot-right   { bottom: 5px; left: -26px; }
+.num-lower-left  { top: -22px; left: 0; }
+
+/* โลโก้ DEATH OF ME กลางภาพ */
+.album-title-block {
+    position: absolute;
+    top: 250px;
+    left: 20px;
+    text-align: left;
+    z-index: 4;
+}
+
+.death-of-me-title {
+    font-family: var(--font-heading);
+    font-size: 5.5rem;
+    line-height: 0.9;
+    color: var(--pure-black);
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.artist-sub-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 6px;
+    color: var(--pure-black);
+    margin-top: 10px;
+}
+
+.support-text {
+    font-family: var(--font-text);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--pure-black);
+    margin-top: 6px;
+}
+
+/* =========================================================
+   3. MIDDLE CONTAINER & SECTIONS
+   ========================================================= */
+.middle-container {
+    max-width: 820px;
+    margin: 20px auto 80px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: var(--pure-black);
+    margin-bottom: 15px;
+}
+
+.bold-hr {
+    border: none;
+    border-top: 4px solid var(--pure-black);
+    width: 60px;
+    margin: 70px auto;
+}
+
+/* Intro Black Box */
+.intro-wrapper {
+    margin: 20px 0;
+}
+
+.black-intro-box {
+    background-color: var(--pure-black);
+    border-radius: 6px;
+    padding: 30px 35px;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+}
+
+.intro-italic {
+    color: var(--pure-white);
+    font-style: italic;
+    font-family: var(--font-body-alt);
+    font-size: 1.05rem;
+    line-height: 2;
+    margin: 0;
+}
+
+/* =========================================================
+   4. BIOGRAPHY & 4-COLUMN DASHED GRID
+   ========================================================= */
+.bio-section {
+    margin: 30px 0;
+}
+
+.bio-desc {
+    font-family: var(--font-body-alt);
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #1a1a1a;
+    max-width: 760px;
+    margin: 0 auto 30px auto;
+}
+
+.info-grid-dashed {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    border: 3px dashed var(--pure-black);
+    background-color: var(--paper-tint);
+    padding: 25px 15px;
+    box-shadow: 4px 4px 0px var(--pure-black);
+}
+
+.grid-item {
+    border-right: 2px dashed rgba(0, 0, 0, 0.4);
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid-item:last-child {
+    border-right: none;
+}
+
+.info-label {
+    font-family: var(--font-text);
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: var(--album-red);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.info-val {
+    font-family: var(--font-text);
+    font-size: 0.92rem;
+    color: var(--pure-black);
+    line-height: 1.5;
+}
+
+/* =========================================================
+   5. DISCOGRAPHY TABLE (BOLD RED & BLACK)
+   ========================================================= */
+.discography-table-wrap {
+    margin: 40px 0;
+}
+
+.center-table {
+    margin: 25px auto;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: var(--pure-white);
+    border: 4px solid var(--pure-black);
+    box-shadow: 6px 6px 0px var(--pure-black);
+}
+
+.center-table th, 
+.center-table td {
+    border: 3px solid var(--pure-black);
+    padding: 18px 20px;
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.8;
+}
+
+.center-table thead th {
+    background-color: var(--pure-black);
+    color: var(--pure-white);
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+}
+
+.center-table tbody tr:hover {
+    background-color: var(--paper-tint);
+}
+
+.center-table .sub-text {
+    font-size: 0.85rem;
+    color: #555555;
+    font-weight: 600;
+}
+
+.center-table .genre-tag {
+    font-size: 0.82rem;
+    color: var(--album-red);
+    display: block;
+    margin-top: 6px;
+    font-weight: 700;
+}
+
+/* =========================================================
+   6. LETTER PAPER SECTION (ส่งกำลังใจให้ EVAN)
+   ========================================================= */
+.letter-section {
+    margin: 40px auto;
+}
+
+.letter-main-title {
+    font-family: 'Prompt', var(--font-text);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--pure-black);
+    margin-bottom: 4px;
+}
+
+.letter-subtitle {
+    font-family: 'Prompt', sans-serif;
+    color: #2b0003;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+/* กรอบกระดาษจดหมายสไตล์ Minimal Red */
+.cute-letter-paper {
+    background: var(--pure-white);
+    border: 3px dashed var(--pure-black);
+    border-radius: 12px;
+    padding: 40px 35px 35px 35px;
+    position: relative;
+    box-shadow: 6px 6px 0px var(--pure-black);
+    text-align: left;
+}
+
+.stamp-deco {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    border: 2px dashed var(--pure-black);
+    background: var(--paper-tint);
+    color: var(--pure-black);
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    padding: 6px 14px;
+    transform: rotate(4deg);
+}
+
+.letter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.letter-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.letter-label {
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--pure-black);
+    min-width: 45px;
+}
+
+.letter-input-inline {
+    flex: 1;
+    border: none;
+    border-bottom: 2px dashed var(--pure-black);
+    background: transparent;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.05rem;
+    color: #111111;
+    padding: 4px 8px;
+    outline: none;
+}
+
+.letter-textarea {
+    width: 100%;
+    border: 2px solid var(--pure-black);
+    border-radius: 6px;
+    background-color: #fafafa;
+    padding: 16px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--pure-black);
+    outline: none;
+    resize: vertical;
+}
+
+.letter-textarea:focus {
+    background-color: var(--pure-white);
+    border-color: var(--album-red);
+}
+
+.from-row {
+    justify-content: flex-end;
+}
+
+.from-input {
+    max-width: 280px;
+}
+
+.letter-btn-wrap {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.send-letter-btn {
+    background: var(--pure-black);
+    color: var(--pure-white);
+    border: 2px solid var(--pure-black);
+    border-radius: 4px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 12px 35px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+    transition: all 0.15s ease;
+}
+
+.send-letter-btn:hover {
+    background: var(--album-red);
+    color: var(--pure-white);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--pure-black);
+}
+
+/* =========================================================
+   7. BOTTOM CONTAINER (FOOTER)
+   ========================================================= */
+.bottom-container {
+    background-color: var(--pure-black);
+    padding: 40px 20px;
+    color: var(--pure-white);
+}
+
+.footer-links {
+    margin-bottom: 15px;
+}
+
+.footer-link {
+    color: var(--pure-white);
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin: 0 18px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: var(--album-red);
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #999999;
+}
+
+/* =========================================================
+   8. RESPONSIVE DESIGN (TABLETS & PHONES)
+   ========================================================= */
+@media (max-width: 800px) {
+    .death-of-me-title {
+        font-size: 4rem;
+    }
+    .cover-collage {
+        min-height: 520px;
+    }
+    .photo-top-left {
+        width: 140px;
+        height: 170px;
+    }
+    .photo-cluster-right .photo-mid-1 {
+        width: 160px;
+        height: 190px;
+        right: 40px;
+    }
+    .photo-cluster-right .photo-mid-2 {
+        width: 130px;
+        height: 150px;
+    }
+    .photo-cluster-bottom .photo-bot-main {
+        width: 180px;
+        height: 220px;
+        right: 40px;
+    }
+    .album-title-block {
+        top: 200px;
+    }
+    .info-grid-dashed {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .grid-item:nth-child(2) {
+        border-right: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .cover-collage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        min-height: auto;
+    }
+    .photo-card {
+        position: static;
+        width: 80%;
+        height: 250px;
+    }
+    .album-title-block {
+        position: static;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .photo-num {
+        display: none;
+    }
+    .info-grid-dashed {
+        grid-template-columns: 1fr;
+    }
+    .grid-item {
+        border-right: none;
+        border-bottom: 2px dashed rgba(0, 0, 0, 0.3);
+        padding-bottom: 12px;
+    }
+    .grid-item:last-child {
+        border-bottom: none;
+    }
+    .letter-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .from-input {
+        max-width: 100%;
+    }
+}
